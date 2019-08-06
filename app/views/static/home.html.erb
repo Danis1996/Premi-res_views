@@ -23,7 +23,9 @@
   <div class="card-body">
     <h3 class="card-title"><%= gossip.user.first_name %></h3>
     <h2 class="card-text"><%= gossip.title %></h2>
-    <a href="/gossip/<%=index + 1%>" class="btn btn-primary">Afficher le Potin</a>
+
+    <%= link_to "Afficher le Potin", gossip_id_path(gossip.id) %>
+
   </div>
   <div class="card-footer text-muted">
     crée le <%= gossip.created_at%>

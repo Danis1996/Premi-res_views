@@ -9,7 +9,8 @@
     <div class="card-body">
       <h5 class="card-title"><%= @find.title %></h5>
       <p class="card-text"><%= @find.content %></p>
-      <a href="/user/<%=@find.user_id%>" class="btn btn-primary">A propos de l'auteur</a>
+      <%= link_to "A propos de l'auteur", user_id_path(@find.user.id) %>
+
     </div>
     <div class="card-footer text-muted">
       <%= @find.created_at %>
