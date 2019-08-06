@@ -1,0 +1,40 @@
+<head>
+	
+</head>
+<body>
+	<div class="card">
+ 	 <div class="card-body">
+  	  <h1> Bienvenue dans Gossip Project!</h1>
+ 	 </div>
+	</div>
+
+	<div class="card">
+ 	 <div class="card-body">
+  	  <h3> Voici la listes des Gossips: </h3>
+ 	 </div>
+	</div>
+
+
+<%=	@gossip.each_with_index do |gossip, index|%>
+<div class="card text-center">
+  <div class="card-header">
+    Potin N° <%=index + 1%>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title"><%= gossip.user.first_name %></h3>
+    <h2 class="card-text"><%= gossip.title %></h2>
+    <a href="/gossip/<%=index + 1%>" class="btn btn-primary">Afficher le Potin</a>
+  </div>
+  <div class="card-footer text-muted">
+    crée le <%= gossip.created_at%>
+  </div>
+</div>
+<h3> _ </h3>
+<% end %>
+
+</body>
+
+
+
+
+
